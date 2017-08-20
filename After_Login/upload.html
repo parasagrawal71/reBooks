@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <title>Upload</title>
+		
+        <title>Upload</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+		<link rel="stylesheet" href="css/upload/style.css">
+	 <!--    Bootstrap -->
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/upload/custom_buy.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+    
+<div class="main_page">
+	<div class="container-fluid">
+    	<div class="page-header">
+			<div class="container">
+            	<div class="col-md-3">
+                	<a href="LoggedIn_reBooks.html"><img src="images/book.png" /></a>
+                </div>
+				
+				
+				<div class="col-md-9">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+							  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							  </button>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li><a href="LoggedIn_reBooks.html">HOME<span class="sr-only">(current)</span></a></li>
+									<li><a href="logout.php">LOGOUT</a></li>
+									<li><a href="select_sem.html">DOWNLOAD</a></li>
+									<li><a href="about.html">ABOUT US</a></li>
+									<li><a href="contact.html">CUSTOMER SUPPORT</a></li>
+								</ul>
+							</div><!-- /.navbar-collapse -->
+						</div><!-- /.container-fluid -->
+					</nav>
+                 </div>
+            </div>
+        </div>
+	</div>
+</div>	
+
+      <form action="upload.php" method="post" enctype="multipart/form-data">
+      
+        <h1>UPLOAD A FREE AD</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Your basic info</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name" required>
+          
+          <label for="email">Email:</label>
+          <input type="text" id="mail" name="user_email" required>
+          
+          <label for="phone">Phone:</label>
+          <input type="text" id="phone" name="user_phone" required>
+		  
+		  <label for="college">College:</label>
+          <input type="text" id="college" name="user_college" required>
+          
+        </fieldset>
+        
+        <fieldset>
+          <legend><span class="number">2</span>Product Info</legend>
+		  
+		  <label for="bookname">Book Name:</label>
+          <input type="text" id="bookname" name="bookname" placeholder="Or Xerox Notes, Calc etc" required>
+		  
+		   <label for="author">Author Name:</label>
+          <input type="text" id="author" name="author" required>
+		  
+		  <label for="branch_sem">Branch and Sem:</label>
+          <input type="text" id="branch_sem" name="branch_sem" required>
+		  
+          <label for="book_descrp">Book Description:</label>
+          <textarea id="book_descrp" name="book_descrp" cols="40" rows="4" placeholder=""></textarea required>
+		  
+		  <label for="choose">Upload Images:</label>
+          <input type="file" id="choose" name="image" required>
+		  
+        </fieldset>
+        By clicking 'Submit' you agree to our Terms of Use & Posting Rules
+        <input class="submit" type="submit" value="SUBMIT" name="submit">
+      </form>
+	  
+	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+      
+    </body>
+</html>
+  
+  

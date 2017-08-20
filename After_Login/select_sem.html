@@ -1,0 +1,214 @@
+<html>
+<head>
+<title>Select</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/download/custom_buy.css" rel="stylesheet">
+	<link href="css/download/select_css.css" rel="stylesheet">
+	
+</head>
+
+<body onload="LoadBranch();">
+<div class="main_page">
+	<div class="container-fluid">
+    	<div class="page-header">
+			<div class="container">
+            	<div class="col-md-3">
+                	<a href="LoggedIn_reBooks.html"><img src="images/book.png" /></a>
+                </div>
+				
+				
+				<div class="col-md-9">
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+							  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							  </button>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li><a href="LoggedIn_reBooks.html">HOME<span class="sr-only">(current)</span></a></li>
+									<li><a href="logout.php">LOGOUT</a></li>
+									<li><a href="#">DOWNLOAD</a></li>
+									<li><a href="about.html">ABOUT US</a></li>
+									<li><a href="contact.html">CUSTOMER SUPPORT</a></li>
+								</ul>
+							</div><!-- /.navbar-collapse -->
+						</div><!-- /.container-fluid -->
+					</nav>
+                 </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+		
+    </div>                   
+</div>
+	
+	<div>
+	<form name="drop_list" action="" method="post">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6"> <br/> <br/>
+			<label id="" > SELECT YOUR BRANCH</label> <br/> <br/>
+			<select name="branch" class="select" id="" onChange="SelectBranch();">
+			</select>
+			</div>
+		
+			<div class="col-md-6"> <br/> <br/>
+			<label id=""> SELECT YOUR SEMESTER</label> <br/> <br/>
+			<select name="sem" class="select" id="" onChange="SelectRedirect();">				
+			</select>
+			</div>
+		</div>
+	</div>
+		
+		
+	</form>
+	</div>
+	
+	<script type="text/javascript">
+	
+	function LoadBranch(){ 
+		// this function is used to fill the branch list on load
+		addOption(document.drop_list.branch, "", "", "");
+		addOption(document.drop_list.branch, "CSE", "CSE", "");
+		addOption(document.drop_list.branch, "IS", "IS", "");
+		addOption(document.drop_list.branch, "ECE", "ECE", "");
+		addOption(document.drop_list.branch, "EEE", "EEE", "");
+		addOption(document.drop_list.branch, "MECH", "MECH", "");
+		addOption(document.drop_list.branch, "CIVIL", "CIVIL", "");
+		}
+		
+	///////////////////
+	function addOption(selectbox, value, text )
+		{
+		var optn = document.createElement("OPTION");
+		optn.text = text;
+		optn.value = value;
+		selectbox.options.add(optn);
+		}
+	function removeAllOptions(selectbox)
+		{
+		var i;
+			for(i=selectbox.options.length-1;i>=0;i--)
+			{
+			//selectbox.options.remove(i);
+			selectbox.remove(i);
+			}
+		}
+	///////////////////
+	
+	function SelectBranch(){
+		// ON selection of branch this function will work
+
+		removeAllOptions(document.drop_list.sem);
+		addOption(document.drop_list.sem, "", "", "");
+
+		if(document.drop_list.branch.value == 'CSE'){
+		addOption(document.drop_list.sem,"CSE-I", "CSE-I");
+		addOption(document.drop_list.sem,"CSE-II", "CSE-II");
+		addOption(document.drop_list.sem,"CSE-III", "CSE-III");
+		addOption(document.drop_list.sem,"CSE-IV", "CSE-IV");
+		addOption(document.drop_list.sem,"CSE-V", "CSE-V");
+		addOption(document.drop_list.sem,"CSE-VI", "CSE-VI");
+		}
+		if(document.drop_list.branch.value == 'IS'){
+		addOption(document.drop_list.sem,"IS-I", "IS-I");
+		addOption(document.drop_list.sem,"IS-II", "IS-II");
+		addOption(document.drop_list.sem,"IS-III", "IS-III");
+		addOption(document.drop_list.sem,"IS-IV", "IS-IV");
+		addOption(document.drop_list.sem,"IS-V", "IS-V");
+		addOption(document.drop_list.sem,"IS-VI", "IS-VI");
+		}
+		if(document.drop_list.branch.value == 'ECE'){
+		addOption(document.drop_list.sem,"ECE-I", "ECE-I");
+		addOption(document.drop_list.sem,"ECE-II", "ECE-II");
+		addOption(document.drop_list.sem,"ECE-III", "ECE-III");
+		addOption(document.drop_list.sem,"ECE-IV", "ECE-IV");
+		addOption(document.drop_list.sem,"ECE-V", "ECE-V");
+		addOption(document.drop_list.sem,"ECE-VI", "ECE-VI");
+		}
+				if(document.drop_list.branch.value == 'EEE'){
+		addOption(document.drop_list.sem,"EEE-I", "EEE-I");
+		addOption(document.drop_list.sem,"EEE-II", "EEE-II");
+		addOption(document.drop_list.sem,"EEE-III", "EEE-III");
+		addOption(document.drop_list.sem,"EEE-IV", "EEE-IV");
+		addOption(document.drop_list.sem,"EEE-V", "EEE-V");
+		addOption(document.drop_list.sem,"EEE-VI", "EEE-VI");
+		}
+				if(document.drop_list.branch.value == 'MECH'){
+		addOption(document.drop_list.sem,"MECH-I", "MECH-I");
+		addOption(document.drop_list.sem,"MECH-II", "MECH-II");
+		addOption(document.drop_list.sem,"MECH-III", "MECH-III");
+		addOption(document.drop_list.sem,"MECH-IV", "MECH-IV");
+		addOption(document.drop_list.sem,"MECH-V", "MECH-V");
+		addOption(document.drop_list.sem,"MECH-VI", "MECH-VI");
+		}
+				if(document.drop_list.branch.value == 'CIVIL'){
+		addOption(document.drop_list.sem,"CIVIL-I", "CIVIL-I");
+		addOption(document.drop_list.sem,"CIVIL-II", "CIVIL-II");
+		addOption(document.drop_list.sem,"CIVIL-III", "CIVIL-III");
+		addOption(document.drop_list.sem,"CIVIL-IV", "CIVIL-IV");
+		addOption(document.drop_list.sem,"CIVIL-V", "CIVIL-V");
+		addOption(document.drop_list.sem,"CIVIL-VI", "CIVIL-VI");
+		}
+
+		}
+		
+			 
+	
+	function SelectRedirect(){
+		// ON selection of Sub category this function will work
+		//alert( document.drop_list.sem.value);
+
+		switch(document.drop_list.sem.value)
+		{
+			case ("CSE-IV"): //||  "CSE-II"||"CSE-III" ||"CSE-IV" ||"CSE-V" ||"CSE-VI" ):
+			window.location="downloadCSE.html";
+			break;
+
+			case ("IS-I" || "IS-II"||"IS-III" ||"IS-IV" ||"IS-V" ||"IS-VI" ):
+			window.location="";
+			break;
+
+			case ("ECE-I" || "ECE-II"||"ECE-III" ||"ECE-IV" ||"ECE-V" ||"ECE-VI" ):
+			window.location="";
+			break;
+
+			case ("EEE-I" || "EEE-II"||"EEE-III" ||"EEE-IV" ||"EEE-V" ||"EEE-VI" ):  
+			window.location="downloadEEE.html";
+			break;
+			
+			case ("MECH-I" || "MECH-II"||"MECH-III" ||"MECH-IV" ||"MECH-V" ||"MECH-VI" ):
+			window.location="downloadMECH.html";
+			break;
+			
+			case ("CIVIL-I" || "CIVIL-II"||"CIVIL-III" ||"CIVIL-IV" ||"CIVIL-V" ||"CIVIL-VI" ):
+			window.location="";
+			break;
+
+			default:
+			window.location="#"; // if no selection matches then redirected to home page
+			break;
+
+		}// end of switch 
+}
+	</script>
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>	
+	
+</body>
+
+
+</html>
